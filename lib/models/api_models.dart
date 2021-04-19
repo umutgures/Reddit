@@ -242,7 +242,7 @@ class ChildData {
   dynamic contentCategories;
   bool isSelf;
   dynamic modNote;
-  int created;
+  double created;
   String linkFlairType;
   int wls;
   dynamic removedByCategory;
@@ -296,7 +296,7 @@ class ChildData {
   bool stickied;
   String url;
   int subredditSubscribers;
-  int createdUtc;
+  double createdUtc;
   int numCrossposts;
   Media media;
   bool isVideo;

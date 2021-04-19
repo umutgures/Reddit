@@ -52,10 +52,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       showUnselectedLabels: false,
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home_filled,size: MediaQuery.of(context).size.width/13,),label: "Ana Sayfa",),
-        BottomNavigationBarItem(icon: Icon(Icons.search,size: MediaQuery.of(context).size.width/13),label: "Arama"),
+        BottomNavigationBarItem(icon: Icon(Icons.notifications,size: MediaQuery.of(context).size.width/13),label: "Arama"),
         BottomNavigationBarItem(icon: Icon(Icons.add,size: MediaQuery.of(context).size.width/13),label: "Arama"),
         BottomNavigationBarItem(icon: Icon(Icons.message,size: MediaQuery.of(context).size.width/13),label: "Mesajlar"),
-        BottomNavigationBarItem(icon: Icon(Icons.add,size: MediaQuery.of(context).size.width/13),label: "Profil"),
+        BottomNavigationBarItem(icon: Icon(Icons.email,size: MediaQuery.of(context).size.width/13),label: "Profil"),
       ],
       type: BottomNavigationBarType.fixed,
       currentIndex: secilenIndex,
