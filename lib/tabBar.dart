@@ -211,7 +211,7 @@ class _tabBarState extends State<tabBar> with SingleTickerProviderStateMixin{
               else if((gelenVeri.connectionState==ConnectionState.done)) {
                 //İşlem bitmişse
                 return ListView.builder(
-                  itemCount: gelenVeri.data.data.children.length,
+                    itemCount: gelenVeri.data.data.children.length,
                     itemBuilder: (context,index){
                       return Card(
                         elevation: 6,
@@ -291,9 +291,14 @@ class _tabBarState extends State<tabBar> with SingleTickerProviderStateMixin{
                             Container(
                               width: MediaQuery.of(context).size.width,
                               height: MediaQuery.of(context).size.height/3.5,
-                              child: FadeInImage.assetNetwork(placeholder: "assets/giphy.gif", image: gelenVeri.data.data.children[index].data.thumbnail==null?"assets/Reddit-Amblem.png":gelenVeri.data.data.children[index].data.thumbnail,fit: BoxFit.fill,),
+                              decoration: BoxDecoration(
+                                  image :DecorationImage(
+                                      image: gelenVeri.data.data.children[index].data.thumbnail=="self"?AssetImage("assets/Reddit-Amblem.png"):NetworkImage(gelenVeri.data.data.children[index].data.thumbnail),
+                                      fit: BoxFit.fill
+                                  )
+                              ),
+                              //child: FadeInImage.assetNetwork(placeholder: "assets/giphy.gif", image: ==null?"assets/Reddit-Amblem.png":gelenVeri.data.data.children[index].data.thumbnail,fit: BoxFit.fill,),
                             ),
-
                             Container(
                               width: MediaQuery.of(context).size.width,
                               height: MediaQuery.of(context).size.height/15,
